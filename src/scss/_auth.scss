@@ -1,0 +1,69 @@
+// Input Form
+
+.authForm {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    h3 {
+        font-family: montserat;
+    }
+
+    .card {
+
+        form {
+
+            input {
+                border: none;
+                border-bottom: 2px solid rgb(216, 214, 214);
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+
+// Input Form
+
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.form-check-input:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+
+@media screen and (min-width: 380px) {
+    .auth-input {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .auth-input {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+    }
+}

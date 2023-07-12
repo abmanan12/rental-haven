@@ -1,0 +1,47 @@
+.heroText {
+    color: $info;
+}
+
+.typing-demo {
+    width: 19ch;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    animation: typing 3s steps(19);
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+
+.slick-track {
+    text-align: justify;
+}
+
+
+.hero-icons {
+    text-align: center;
+    font-size: 60px;
+}
+
+.hero-icon-text {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+.link {
+    text-decoration: none;
+    color: #6C757D;
+    font-weight: bold;
+
+    &:hover {
+        color: $info;
+    }
+
+}

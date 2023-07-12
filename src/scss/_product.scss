@@ -1,0 +1,59 @@
+.gridBtn {
+    font-size: 30;
+    padding: 2;
+}
+
+.gridActive {
+    background-color: #000;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .sortWidth {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sortWidth {
+        width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sortWidth {
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sortWidth {
+        width: 90% !important;
+    }
+
+    .cardWidth {
+        width: 19rem;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .sortWidth {
+        width: 100% !important;
+    }
+
+    .cardWidth {
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sortWidth {
+        width: 40% !important;
+    }
+
+    .cardWidth {
+        width: 17rem;
+    }
+
+}

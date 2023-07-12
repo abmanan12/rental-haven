@@ -1,0 +1,35 @@
+figure {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover img {
+        transition: all 0.2s linear;
+        transform: scale(1.1);
+    }
+
+    img {
+        max-width: 95%;
+        height: 200px;
+        transition: all 0.2s linear;
+    }
+}
