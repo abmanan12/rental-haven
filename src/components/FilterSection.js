@@ -31,14 +31,14 @@ export default function FilterSection() {
               <div className="row">
                 <div className="col-12 col-lg-10 offset-lg-1">
 
-                  <div className='pb-4 d-flex justify-content-between'>
+                  <div className='pb-3 d-flex justify-content-between'>
                     <h5 className='fw-bold'>Filters:</h5>
                     <h6 className='text-end text-muted' onClick={() => setOpen(false)}
                       style={{ cursor: 'pointer' }}><ImCross /></h6>
                   </div>
 
                   <div className="row">
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <form onSubmit={(e) => e.preventDefault()}>
                         <input
                           type="search"
@@ -51,7 +51,7 @@ export default function FilterSection() {
                       </form>
                     </div>
 
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <form>
                         <select onClick={changeSelectOptionHandler} onChange={updateFilter} name='categoryType'
                           className="form-select py-2" aria-label="Default select example">
@@ -66,7 +66,7 @@ export default function FilterSection() {
                       </form>
                     </div>
 
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <form>
                         <select className="form-select py-2" name='categoryName' aria-label="Default select example"
                           onChange={updateFilter}>
@@ -76,7 +76,7 @@ export default function FilterSection() {
                       </form>
                     </div>
 
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <select onClick={changeSelectLocationHandler} onChange={updateFilter} name='province'
                         className="form-select py-2 outline-0" aria-label="Default select example">
                         <option hidden value=''>Select Province</option>
@@ -88,7 +88,7 @@ export default function FilterSection() {
                       </select>
                     </div>
 
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <form>
                         <select className="form-select py-2" name='categoryName' aria-label="Default select example"
                           onChange={updateFilter}>
@@ -98,7 +98,7 @@ export default function FilterSection() {
                       </form>
                     </div>
 
-                    <div className="col-12 mb-3">
+                    <div className="col-12 mb-2">
                       <form>
                         <select className="form-select py-2 outline-0" name='condition' aria-label="Default select example"
                           onChange={updateFilter}>
@@ -110,7 +110,7 @@ export default function FilterSection() {
                       </form>
                     </div>
 
-                    <div className="col-12 mb-4">
+                    <div className="col-12 mb-2">
                       <h5>Price</h5>
                       <p className='mb-1'>{<FormatPrice price={price} />}</p>
                       <div>

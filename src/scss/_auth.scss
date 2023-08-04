@@ -67,3 +67,35 @@
         padding-right: 48px !important;
     }
 }
+
+
+// settings auth form
+
+.auth-setting-Form {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 76px) !important;
+
+    h3 {
+        font-family: montserat;
+    }
+
+    .card {
+
+        form {
+
+            input {
+                border: none;
+                border-bottom: 2px solid rgb(216, 214, 214);
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+            }
+        }
+
+    }
+}

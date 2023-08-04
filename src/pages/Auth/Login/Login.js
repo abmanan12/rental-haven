@@ -28,7 +28,7 @@ export default function Login() {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user);
+                // console.log(user);
 
                 window.tostify("User Logged In Successfully", 'success')
 

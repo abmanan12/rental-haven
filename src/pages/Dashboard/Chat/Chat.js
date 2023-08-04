@@ -6,6 +6,7 @@
 // import { AuthContext } from '../../../contexts/AuthContext'
 // import { firestore } from '../../../config/firebase'
 // import { arrayUnion, collection, doc, onSnapshot, query, updateDoc, where } from 'firebase/firestore'
+// import InputEmoji from 'react-input-emoji'
 
 // export default function Chat() {
 
@@ -59,9 +60,14 @@
 
 //   }, [user, userUid])
 
+//   const handChange = text => {
+//     setText(text);
+//   };
 
 //   // Send Messages
-//   const handleSend = async () => {
+//   const handleSend = async (e) => {
+
+//     e.preventDefault();
 
 //     let randomId = window.getRandomId()
 //     const docid = userUid > user.uid ? user.uid + userUid : userUid + user.uid
@@ -80,6 +86,7 @@
 //     }
 
 //     setText("")
+//     console.log(docid);
 
 //     await updateDoc(doc(firestore, "Chatrooms", docid), {
 //       allMessage: arrayUnion(mymsg),
@@ -128,7 +135,7 @@
 //                   <div className="messages border-start">
 
 //                     {
-//                       messages.map((curElem, i) => {
+//                       messages?.map((curElem, i) => {
 //                         return (
 //                           <div className={`message ${curElem.sentBy === user.uid && "owner"}`}>
 //                             <div ref={ref} className="messageContent">
@@ -142,11 +149,12 @@
 //                   </div>
 
 //                   <div className="input ms-3 me-1 position-relative border" style={{ top: '-36px', right: '16px' }}>
-//                     <input
-//                       type="text"
-//                       placeholder="Type something..."
-//                       onChange={(e) => setText(e.target.value)}
+
+//                     <InputEmoji
 //                       value={text}
+//                       onChange={handChange}
+//                       // cleanOnEnter
+//                       placeholder="Type a message..."
 //                     />
 //                     <div className="send">
 //                       <button onClick={handleSend}>SEND</button>
@@ -166,8 +174,24 @@
 // }
 
 
+// import React from 'react'
+
+// import { Modal } from '@mantine/core';
+
+// export default function Chat() {
+
+//     return (
+//         <>
+//             <Modal opened={true} title="Chat">
+//                 {/* Modal content */}
+//             </Modal>
+//         </>
+//     );
+// }
+
 
 import React from 'react'
+import Messages from './Messages'
 
 export default function Chat() {
   return (

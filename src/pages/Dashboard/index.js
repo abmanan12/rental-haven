@@ -6,6 +6,7 @@ import Rent from './Rent'
 import Navbar from './Navbar'
 import Chat from './Chat'
 import Settings from './Settings'
+// import ChangeInfo from './Settings/ChangeInfo'
 // import FooterBottom from '../../components/Footer/FooterBottom'
 
 export default function Index() {
@@ -14,7 +15,7 @@ export default function Index() {
             <Navbar />
             <main>
                 <Routes >
-                    <Route path='/' element={<Hero />} />
+                    {/* <Route path='/' element={<Hero />} /> */}
                     <Route path='/rent' element={<Rent />} />
                     <Route path='/chat/:uid' element={<Chat />} />
                     <Route path='/setting' element={<Settings />} />
