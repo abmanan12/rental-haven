@@ -9,14 +9,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-light navbar-light py-2">
+            <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2">
                 <div className="fluid-container">
                     <div className="row">
                         <div className="col">
 
                             <div className='ms-4' onClick={() => navigate(-1)}>
-                                <BiArrowBack className='fs-4' />
-                                <span className='ms-3'><img src="/assets/images/logo.png"
+                                <BiArrowBack className='fs-4 text-light' />
+                                <span className='ms-3'><img src="/assets/images/logoo.png"
                                     alt="logo" width="140" height="60" /></span>
                             </div>
 

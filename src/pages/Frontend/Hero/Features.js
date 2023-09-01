@@ -44,10 +44,10 @@ export default function Features() {
     return (
         <>
 
-            <div className="container shadow-none px-4 px-lg-5">
+            <div className="container shadow-none">
 
-                <div className='heroText'>
-                    <h3 className='typing-demo mb-3'>Rental Haven Features</h3>
+                <div className='heroText' style={{ color: '#212121' }}>
+                    <h3 className='typing-demo mb-3 text-info'>Rental Haven Features</h3>
                 </div>
 
                 <Slider {...settings}>

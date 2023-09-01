@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
 
+import { addDoc, collection } from 'firebase/firestore'
+import { firestore } from '../../../config/firebase'
+import { useContext } from 'react'
+import { AuthContext } from '../../../contexts/AuthContext'
+
 const initialState = {
   userName: '',
   titleName: '',
@@ -11,16 +16,34 @@ const initialState = {
 export default function Contact() {
 
   const [state, setState] = useState(initialState)
+  const [loading, setLoading] = useState(false)
+  const { user } = useContext(AuthContext)
 
   const handleChange = e => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
 
     e.preventDefault()
+    setLoading(true)
 
-    console.log(state);
+    const userMessage = state
+    userMessage.uid = user?.uid
+
+    try {
+
+      await addDoc(collection(firestore, 'Contact'), userMessage);
+
+      setLoading(false)
+      window.tostify('Message has been sent successfully', 'success')
+
+    }
+    catch (error) {
+      setLoading(false)
+      window.tostify('Something went wrong', 'error')
+    }
+
     setState(initialState)
   }
 
@@ -147,7 +170,11 @@ export default function Contact() {
 
               <div className="row mt-3 mt-md-4">
                 <div className="col">
-                  <button className='btn btn-1' onClick={handleSubmit}>SEND QUESTION</button>
+                  <button className='btn btn-1' onClick={handleSubmit} disabled={loading}>
+                    {
+                      !loading ? 'SEND QUESTION' : <div className="spinner-grow spinner-grow-sm"></div>
+                    }
+                  </button>
                 </div>
               </div>
 

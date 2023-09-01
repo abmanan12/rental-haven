@@ -3,10 +3,10 @@
   height: 64px;
   position: relative;
   background-image:
-    linear-gradient(#FFF 16px, transparent 0) ,
+    linear-gradient($primary 16px, transparent 0) ,
     linear-gradient($info 16px, transparent 0) ,
     linear-gradient($info 16px, transparent 0) ,
-    linear-gradient(#FFF 16px, transparent 0);
+    linear-gradient($primary 16px, transparent 0);
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: left top , left bottom , right top , right bottom;

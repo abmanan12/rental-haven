@@ -10,7 +10,7 @@ import { auth, firestore, storage } from '../../../config/firebase'
 import { collection, doc, onSnapshot, query, setDoc, where } from 'firebase/firestore'
 import { deleteObject, getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 
-function ChangeInfo({ Open }) {
+function ChangeInfo({ modal, setModal }) {
 
     const navigate = useNavigate()
     const [file, setFile] = useState(null)
@@ -156,17 +156,15 @@ function ChangeInfo({ Open }) {
             })
     }
 
-
-
     return (
         <>
-            <Modal opened={Open} title="SETTINGS" centered>
+            <Modal opened={modal} onClose={() => setModal(true)} title="SETTINGS" centered>
 
                 <div className="my-4 mx-auto text-center">
                     {
                         !userData ? <div className='d-flex justify-content-center'><Avatar style={{ width: '60px', height: '60px' }} /></div>
                             : <div className='d-flex justify-content-center'>
-                                <img src={userData?.image} className='border' style={{ borderRadius: '50%' }}
+                                <img src={userData?.image} className='border' loading="lazy" style={{ borderRadius: '50%' }}
                                     alt="profileImg" width="90" height="90" id='changeImg' />
                             </div>
                     }
@@ -194,6 +192,7 @@ function ChangeInfo({ Open }) {
                 </div>
 
                 <div className='text-end pe-md-3 mt-5 mb-3'>
+                    <button type="button" className="btn btn-info text-light me-2" onClick={() => navigate('/')}>Back</button>
                     <button type="button" className="btn btn-info text-light" disabled={isProcessing} onClick={handleSave}>
                         {!isProcessing ? 'Save Changes' : <div className='spinner-grow spinner-grow-sm'></div>}
                     </button>

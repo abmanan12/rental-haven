@@ -87,13 +87,14 @@ p {
 
 
 .overlay {
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(10, 10, 10, 0.6);
     width: 100%;
     height: 100%;
 }
 
 .about-img {
-    background: url(https://c0.wallpaperflare.com/preview/920/519/697/abstract-php-c-analytics.jpg) no-repeat center center/cover;
+    background: url(../../public/assets/images/bgImg2.jpg) no-repeat center center/cover;
+    background-origin: content-box;
     min-height: 80%;
     position: relative;
 }

@@ -16,9 +16,12 @@ export default function Navbar() {
 
     const [open, setOpen] = useState(false);
     const { cart } = useCartContext()
-    const { isAuthenticated, dispatch, name, image } = useContext(AuthContext)
+    const { user, isAuthenticated, dispatch, name, image } = useContext(AuthContext)
 
-    let cartLength = cart.length
+    let uidCart = cart?.filter((curElem) => {
+        return curElem.uid === user.uid
+    })
+    let cartLength = uidCart?.length
 
     const data = [
         { name: `Cart (${cartLength})`, icon: <CardTravel />, link: '/cart' },
@@ -67,18 +70,18 @@ export default function Navbar() {
         <>
 
             {/* Navbar */}
-            <nav className="navbar navbar-expand-md bg-primary">
+            <nav className="navbar navbar-expand-md bg-dark">
                 <div className="container">
 
                     <NavLink className="navbar-brand pt-2" to="/">
-                        <img src="/assets/images/logo.png"
+                        <img src="/assets/images/logoo.png"
                             alt="logo" width="140" height="60" />
                     </NavLink>
 
                     <button className="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon text-light"></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -104,7 +107,7 @@ export default function Navbar() {
                                 <NavLink to='/cart' className="nav-link">
                                     <span className="position-relative"><ShoppingCart style={{ fontSize: '1.4rem' }} />
                                         <span style={{ fontSize: '10px' }} className="position-absolute badge top-0  
-                                         translate-middle text-info rounded-pill bg-light">{cart?.length}</span>
+                                         translate-middle text-info rounded-pill bg-light">{cartLength}</span>
                                     </span>
                                 </NavLink>
                             </li>
@@ -118,7 +121,7 @@ export default function Navbar() {
                                     </>
 
                                     : <Button style={{ color: 'black' }} onClick={() => setOpen(true)}>
-                                        <Avatar alt="User Name" src={`${image}`} />
+                                        <Avatar alt="User Name" loading="lazy" src={`${image}`} />
                                     </Button>
                                 }
                             </li>
@@ -137,7 +140,7 @@ export default function Navbar() {
                 <div className="py-4 border-bottom text-center">
                     {
                         !image ? <div className='content-center'><Avatar style={{ width: '60px', height: '60px' }} /></div>
-                            : <img src={`${image}`} className='border' style={{ borderRadius: '50%' }} alt="profileImg"
+                            : <img src={`${image}`} className='border' loading="lazy" style={{ borderRadius: '50%' }} alt="profileImg"
                                 width="90" height="90" />
                     }
                     <h5 className='fw-bold mt-3'>{name}</h5>

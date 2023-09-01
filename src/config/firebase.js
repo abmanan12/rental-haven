@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDZ84XYh5aS8zkBvpNd21VqR4cU6YWsJqg",
-    authDomain: "rental-haven-a82b8.firebaseapp.com",
-    projectId: "rental-haven-a82b8",
-    storageBucket: "rental-haven-a82b8.appspot.com",
-    messagingSenderId: "222242276625",
-    appId: "1:222242276625:web:5e40d1247c10262ab1f8b0",
-    measurementId: "G-7YKFFJWFBW"
+    apiKey: "AIzaSyD7aMcVgtYb5M1Ji1IphrJEVe3zFmezL0c",
+    authDomain: "rental-haven.firebaseapp.com",
+    projectId: "rental-haven",
+    storageBucket: "rental-haven.appspot.com",
+    messagingSenderId: "679226530293",
+    appId: "1:679226530293:web:96c3dda3b92130a5e1a8bc",
+    measurementId: "G-3EDQE6LPPK"
 };
 
 // Initialize Firebase

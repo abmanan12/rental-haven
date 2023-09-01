@@ -124,7 +124,7 @@ export default function SingalProduct() {
 
           <div className="row content-center">
             <div className="col-12 col-md-6 text-center">
-              <img src={productImage} alt={titleName} style={{ width: '80%', maxHeight: '260px' }} />
+              <img src={productImage} loading='lazy' alt={titleName} style={{ width: '80%', maxHeight: '260px' }} />
             </div>
 
             <div className="col-12 col-md-6 mt-4 mt-md-0">

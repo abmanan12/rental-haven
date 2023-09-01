@@ -14,7 +14,7 @@ export default function RecentProducts() {
 
                     <div className="row">
                         <div className='col'>
-                            <h3 className='fw-bold text-info mb-3'>Recent Products:</h3>
+                            <h3 className='fw-bold text-info mb-3'>Feature Products:</h3>
                             <p className='text-muted'>These are the most recently added products available for
                                 rent on the platform. User can check details of products by clicking on image.</p>
                         </div>

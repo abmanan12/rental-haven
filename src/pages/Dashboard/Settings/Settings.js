@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { useNavigate } from 'react-router-dom'
 import { auth } from '../../../config/firebase'
 import { AuthContext } from '../../../contexts/AuthContext'
 import ChangeInfo from './ChangeInfo'
 
 export default function Settings() {
 
-    const navigate = useNavigate()
     const [modal, setModal] = useState(false)
     const [password, setPassword] = useState('')
     const [isProcessing, setIsProcessing] = useState(false)
@@ -40,16 +38,16 @@ export default function Settings() {
     return (
         <>
 
-            <div className='py-2 bg-light auth-setting-Form'>
+            <div className='py-2 bg-secondary auth-setting-Form'>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
-                            <div className="card shadow p-3 py-sm-5">
+                            <div className="card shadow p-3 py-sm-5 bg-light">
                                 <div className="row align-items-center">
 
                                     <div className="col-12 col-md-5 col-lg-6 mt-3 mt-md-0 p-xl-4">
-                                        <img src="/assets/images/login.png" className='d-none d-md-block' width='100%'
+                                        <img src="/assets/images/login.png" loading="lazy" className='d-none d-md-block' width='100%'
                                             alt="forgot-password" />
                                     </div>
 
@@ -87,7 +85,7 @@ export default function Settings() {
             </div>
 
             {
-                modal && <ChangeInfo Open={modal} />
+                modal && <ChangeInfo modal={modal} setModal={setModal} />
             }
 
         </>

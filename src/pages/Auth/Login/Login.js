@@ -45,16 +45,16 @@ export default function Login() {
     return (
         <>
 
-            <div className='py-5 bg-light authForm'>
+            <div className='py-5 bg-dark authForm'>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
-                            <div className="card shadow p-3 p-xl-5">
+                            <div className="card shadow p-3 p-xl-5 bg-secondary">
                                 <div className="row align-items-center">
 
                                     <div className="col-12 col-md-6 mt-3 mt-md-0 d-none d-md-block p-xl-4">
-                                        <img src="/assets/images/login.png" width='100%' alt="login" />
+                                        <img src="/assets/images/login.png" loading="lazy" width='100%' alt="login" />
                                     </div>
 
                                     <div className="col-12 col-md-6 auth-input">

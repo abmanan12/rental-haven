@@ -127,7 +127,7 @@ export default function Rent() {
 
     return (
         <>
-            <div className='bg-light'>
+            <div className='bg-light py-4'>
                 <div className="container">
                     <div className="row d-flex align-items-center">
                         <div className="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 px-3 px-sm-0">

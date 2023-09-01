@@ -36,7 +36,7 @@ export default function Product(curElem) {
                 initial='hidden' className="card rounded-0 border mx-auto my-2 cardWidt bg-white">
                 <Link to={`/singalproduct/${productId}`}>
                     <figure>
-                        <img src={productImage} alt={titleName} className="card-img-top px-2 pt-3" />
+                        <img src={productImage} alt={titleName} loading="lazy" className="card-img-top px-2 pt-3" />
                         <figcaption className="position-absolute border rounded-3 px-2 py-1 bg-light text-info"
                             style={{ top: 30, right: 28 }}>{categoryName}</figcaption>
                     </figure>

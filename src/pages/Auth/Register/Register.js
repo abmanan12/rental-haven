@@ -117,12 +117,12 @@ export default function Register() {
   return (
     <>
 
-      <div className='bg-light authForm'>
+      <div className='bg-dark authForm'>
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
-              <div className="card p-3">
+              <div className="card p-3 bg-secondary">
                 <div className="row align-items-center">
 
                   <div className="col-12 col-md-6 auth-input">
@@ -194,7 +194,7 @@ export default function Register() {
                   </div>
 
                   <div className="col-12 col-md-6 mt-3 mt-md-0">
-                    <img src="/assets/images/signup.png" className='d-none d-md-block w-100' alt="login" />
+                    <img src="/assets/images/register.png" loading="lazy" className='d-none d-md-block w-100' alt="login" />
                     <p className='mt-3 d-none d-md-block'><Link className='text-info' to='/Auth/login'>
                       Already Register?</Link></p>
                   </div>

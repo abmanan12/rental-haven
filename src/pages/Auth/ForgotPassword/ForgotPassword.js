@@ -39,16 +39,16 @@ export default function ForgotPassword() {
   return (
     <>
 
-      <div className='py-5 bg-light authForm'>
+      <div className='py-5 bg-dark authForm'>
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
-              <div className="card shadow p-3 py-sm-5">
+              <div className="card shadow p-3 py-sm-5 bg-secondary">
                 <div className="row align-items-center">
 
                   <div className="col-12 col-md-5 col-lg-6 mt-3 mt-md-0 p-xl-4">
-                    <img src="/assets/images/login.png" className='d-none d-md-block' width='100%'
+                    <img src="/assets/images/login.png" loading="lazy" className='d-none d-md-block' width='100%'
                       alt="forgot-password" />
                   </div>
 
@@ -66,7 +66,7 @@ export default function ForgotPassword() {
 
                       <div className="row">
                         <div className="col">
-                          <p className='mt-3 mb-4 mb-md-5'><Link className='text-info' to='/Auth/login'>Back to Login?
+                          <p className='mt-4 mb-4 mb-md-5'><Link className='text-info' to='/Auth/login'>Back to Login?
                           </Link></p>
                         </div>
                       </div>

@@ -9,8 +9,8 @@ export default function About() {
                     <div className='overlay'>
 
                         <div className="mx-3 mx-sm-2 mx-md-3 mx-lg-4 content-center" style={{ height: '60vh' }}>
-                            <div className='p-sm-5 text-info text-transrom-uppercase'>
-                                <h4 style={{ textAlign: 'justify' }}>Online Rental Haven is an online platform that
+                            <div className='p-sm-5 text-primary text-transrom-uppercase'>
+                                <h4 style={{ textAlign: 'justify', opacity: 0.8 }}>Online Rental Haven is an online platform that
                                     provides information about rental properties available for lease or rent.</h4>
                             </div>
                         </div>

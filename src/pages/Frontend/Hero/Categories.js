@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useFilterContext } from '../../../contexts/FilterContext'
+import Features from './Features'
 
 export default function Categories() {
 
@@ -82,6 +83,10 @@ export default function Categories() {
                     </div>
 
                 </div>
+            </div>
+
+            <div className="py-5 bg-light">
+                <Features />
             </div>
 
         </>

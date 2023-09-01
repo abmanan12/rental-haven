@@ -13,7 +13,7 @@ import CartContextProvider from './contexts/CartContext';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: '#ECECEC' }}>
 
       <ProductContextProvider>
         <FilterContextProvider>

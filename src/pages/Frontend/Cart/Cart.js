@@ -13,6 +13,7 @@ export default function Cart() {
   const { cart, clearCart, error } = useCartContext()
   const { user } = useContext(AuthContext)
 
+
   const messagesEndRef = useRef(null)
 
   const scrollToBottom = () => {
@@ -23,17 +24,16 @@ export default function Cart() {
     scrollToBottom()
   }, [])
 
+  let uidCart = cart.filter((curElem) => {
+    return curElem.uid === user.uid
+  })
 
-  if (cart.length === 0) {
+  if (uidCart.length === 0) {
     return <div className='content-center text-muted'
       style={{ height: '34vh' }}>
       <h5>No Item in Cart</h5>
     </div>
   }
-
-  let uidCart = cart.filter((curElem) => {
-    return curElem.uid === user.uid
-  })
 
   return (
     <>
@@ -76,7 +76,7 @@ export default function Cart() {
 
           <div className="row mt-5">
             <div className="col text-end">
-              <button className='btn btn-danger text-light' onClick={clearCart}>CLEAR CART</button>
+              <button className='btn btn-info text-light' onClick={clearCart}>CLEAR CART</button>
             </div>
           </div>
 

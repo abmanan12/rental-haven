@@ -15,7 +15,8 @@ export default function CartItem({ productId, titleName, productImage, price }) 
             <Tr className='mt-2 py-3'>
                 <Td className=''>
                     <Link to={`/singalproduct/${productId}`}>
-                        <img style={{ maxWidth: '5rem', height: '3rem', marginBottom: '10px' }} src={productImage} alt={productId} />
+                        <img style={{ maxWidth: '5rem', height: '3rem', marginBottom: '10px' }} loading='lazy'
+                            src={productImage} alt={productId} />
                     </Link>
                 </Td>
 
@@ -27,7 +28,7 @@ export default function CartItem({ productId, titleName, productImage, price }) 
 
                 <Td className='mb-3'>{<FormatPrice price={price} />}</Td>
 
-                <Td><FaTrash className='text-danger ms-4' onClick={() => removeItem(productId)} /></Td>
+                <Td><FaTrash className='text-info ms-4' onClick={() => removeItem(productId)} /></Td>
             </Tr>
         </>
     )
